@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html data-id="0010" lang="en"><head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="https://jelena-vk-itt.github.io/jvk-tudt-notes/cswd/res/images/logo.png">
+	<link rel="stylesheet" type="text/css" href="https://jelena-vk-itt.github.io/jvk-tudt-notes/common/res/styles/common.css">
+	<title>CSWD Javascript</title>
+	<style>
+	 body { background: lightgray; }
+	</style>
+    </head>
+
+    <body>
+	 
+	
+
+	<header id="tudheader">
+	    <img src="https://jelena-vk-itt.github.io/jvk-tudt-notes/common/res/images/tudublin_logo.png" alt="TU Dublin Logo">
+	    <div id="tuddepttext">
+		<p>Tallaght Campus</p>
+		<p>Department of Computing</p>
+	    </div>
+	    <img id="rightlogo" src="https://jelena-vk-itt.github.io/jvk-tudt-notes/cswd/res/images/logo.png" alt="CSWD Logo">
+	</header>
+
+	<div id="content-no-nav">
+
+	    <h2>Client-Side Web Development CA3</h2>
+
+	    Complete parts 1, 2 and 3 as separate assignments. You may work on them in any order but keep in mind that the part numbers also denote the level of difficulty (1 being the easiest and 3 the most difficult).
+	    
+	    <h3>Part 1 [40%]</h3>
+	    <ol>
+		<li>Open the file <em>part1.html</em> in a text editor and in a browser.</li>
+		<li>Create a new file called <em>part1.js</em> and open it in a text editor.</li>
+		<li>Include the Javascript file in the HTML file, by adding a <span class="fw">script</span> element as the last element inside the <span class="fw">body</span> element.</li>
+		<hr>
+		<li>In the Javascript file, declare and define a function called <span class="fw">writeGreeting</span> with no parameters. The function should write the following text into the element with id 'info':
+		    
+		    <p><span class="fw">Hello, my name is &lt;your name&gt;.</span></p>
+		    
+		    where <span class="fw">&lt;your name&gt;</span> is a placeholder. So, if your name is Jimmy Jones, then you will be writing the sentence
+		    
+		    <p><span class="fw">Hello, my name is Jimmy Jones.</span></p>
+		</li>
+		<li>In the HTML file, set an event handler on the button <em class="bold">friendly</em> so that when that button is clicked, the function <span class="fw">writeGreeting</span> is executed.</li>
+		<hr>
+		<li>In the Javascript file declare and define a function called <span class="fw">modifyBorderColor</span> with one parameter called <span class="fw">element_id</span>. The function should set the style property <span class="fw">borderColor</span> to value 'green' on the element whose id is contained in <span class="fw">element_id</span>.</li>
+		<li>In the HTML file, add the id 'to-style' to the button <em class="bold">Web</em>.</li>
+		<li>In the HTML file, set an event handler on the button <em class="bold">I</em> so that when the mouse goes over that button (event 'mouseover'), the function <span class="fw">modifyBorderColor</span> is called with argument 'to-style', in order to modify button <em class="bold">Web</em>.</li>
+		<hr>
+		<li>Reload the HTML page in the browser and perform a final test to see that:
+		    <ul>
+			<li>when the button <em class="bold">friendly</em> is clicked, the text <span class="fw">Hello my name is &lt;your name&gt;.</span> appears at the bottom of the page</li>
+			<li>when the mouse pointer goes over button <em class="bold">I</em>, the button <em class="bold">Web</em> has its border colour changed</li>
+		    </ul>
+		</li>
+	    </ol>
+
+	    <h3>Part 2 [35%]</h3>
+	    <ol>
+		<li>Open the file <em>part2.html</em> in a browser. Open the file in a text editor, but for viewing only, as <strong>you should not modify the HTML file in this part.</strong></li>
+		<li>The file <em>part2.js</em> is included in the HTML as an external script. This Javascript file is the only file you should edit in this part.</li>
+
+		<li>The file <em>part2.js</em> contains definitions for the words <em class="bold">am</em>, <em class="bold">your</em> and <em class="bold">page</em>, stored in a Javascript object. 
+		</li><li>Declare and define a function called <span class="fw">processWord</span> with a single parameter called <span class="fw">word</span> and the following functionality:
+		    <ul>
+			<li>if one of the three defined words (<em class="bold">am</em>, <em class="bold">your</em> or <em class="bold">page</em>) is passed in, the function fetches the word's definition from the provided object and stores it in a variable called <span class="fw">info</span></li>
+			<li>if any other string is passed in, an empty string is stored in variable <span class="fw">info</span></li>
+			<li>the value from the HTML input element is read into a variable called <span class="fw">inputVal</span> and
+			    <ul>
+				<li>if the input is 'upper', the value in <span class="fw">info</span> is transformed to all-uppercase</li>
+				<li>if the input is 'space', each space character in <span class="fw">info</span> is replaced (use string method <span class="fw">replaceAll</span>) with three space characters i.e. <span class="fw">'&amp;nbsp;&amp;nbsp;&amp;nbsp;'</span></li>
+				<li>if the input is any other string, the value in <span class="fw">info</span> is not changed</li>
+			    </ul>
+			</li>
+			<li>write the value of variable <span class="fw">info</span> into the element with id 'info'</li>
+		    </ul>
+		</li>
+		<li>Write some code outside of any function i.e. directly in the Javascript file to do the following:
+		    <ul>
+			<li>fetch the objects corresponding to the three elements with words <em class="bold">am</em>, <em class="bold">your</em> and <em class="bold">page</em> (use method <span class="fw">getElementsByClassName</span>)</li>
+			<li>set the colour of these three elements to 'darkgray'</li>
+			<li>set handlers on the elements (use method <span class="fw">addEventListener</span>), so that when any of these elements is clicked the function <span class="fw">processWord</span> is called with the clicked element's content as the argument</li>
+		    </ul>
+		</li>
+		<li>Reload the HTML page in the browser and perform a final test to see that the three elements with words <em class="bold">am</em>, <em class="bold">your</em> and <em class="bold">page</em> become darkgray as soon as the page is loaded and that clicking on any of them brings up the definition, formatted according to the additional instruction ('upper' or 'space') in the input field.</li> 
+
+	    </ol>
+
+	    <h3>Part 3 [25%]</h3>
+	    <ol>
+		<li>Open the file <em>part3.html</em> in a browser. Open the file in a text editor, but for viewing only, as <strong>you should not modify the HTML file in this part.</strong></li>
+		<li>The file <em>part3.js</em> is included in the HTML as an external script. This Javascript file is the only file you should edit in this part. The Javascript file contains some code that you can use:
+		    <ul>
+			<li>a function, <span class="fw">get_shuffled_indices(n)</span>, which returns an array of numbers 0 to n-1, shuffled</li>
+			<li>an array with the element labels</li>
+			<li>an array of values (see the problem description)</li>
+		    </ul>
+		</li>
+
+		<li>Write Javascript code that does the following:
+		    <ul>
+			<li>When the HTML page is loaded, the <span class="fw">borderWidth</span> style property is set on the seven visible elements to the following values, one value per element in random order:
+			    <p>'1px', '3px', '5px', '7px', '9px', '11px', '13px'</p>
+			</li>
+			<li>As the user clicks on the elements, if an element is clicked out of order the following message appears instead of the instruction line: "You have made a mistake. Reload the page to play again."</li>
+			<li>If the user clicks on all seven elements in the right order, the following message appears instead of the instruction line: "Well done! Reload the page to play again."</li>
+		    </ul>
+		</li>
+	    </ol>
+	</div>
+
+
+	
+	
+    
+
+
+</body></html>

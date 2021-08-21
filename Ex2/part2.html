@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-id="0010">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+        <style>
+            * { font-family: arial, helvetica, san-serif;
+                box-sizing: border-box; font-size: 16px; }
+            body { padding: 2rem; margin: 0; }
+            .fb { display: flex; justify-content: space-between; margin: 0 0 1em 0; }
+            .fi1 { flex: 0 1 calc(100%); }
+            .fi2 { flex: 0 1 calc(50% - 0.5rem); }
+            .fi3 { flex: 0 1 calc(33.33% - 0.66rem); }
+            .fi4 { flex: 0 1 calc(25% - 0.75rem); }
+            .fi5 { flex: 0 1 calc(20% - 0.8rem); }
+            .elem { width: 100%; height: 10rem; border: 2px solid black; line-height: 6rem;
+                     text-align: center; padding: 2rem; background: lightgray; }
+        </style>
+    </head>
+    <body>
+        <section class="fb">
+            <div class="elem fi2">Hello</div>
+            <button class="elem fi2">I</button>
+        </section>
+        <section class="fb">
+            <div class="elem fi3 active">am</div>
+            <div class="elem fi3 active">your</div>
+            <button class="elem fi3">friendly</button>
+        </section>
+        <section class="fb">
+            <button class="elem fi2">Web</button>
+            <div class="elem fi2 active">page</div>
+        </section>
+        <p>Input: <input type="text" id="the-input"></p>
+        <p>Definition: <span id="info"></span></p>
+        <script src="part2.js"></script>
+    </body>
+</html>
